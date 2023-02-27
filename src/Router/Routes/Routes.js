@@ -4,6 +4,7 @@ import AllServices from "../../components/AllServices/AllServices";
 import Home from "../../components/Home/Home";
 import Login from "../../components/Login/Login";
 import Reviews from "../../components/Reviews/Reviews";
+import ServiceDetails from "../../components/ServiceDetails/ServiceDetails";
 import Main from "../../layout/Main";
 
 export const routes = createBrowserRouter([
@@ -18,6 +19,13 @@ export const routes = createBrowserRouter([
             {
                 path: '/allServices',
                 element: <AllServices></AllServices>
+            },
+            {
+                path: '/serviceDetails/:id',
+                // loader: async ({ params }) => {
+                //     return fetch(`http://localhost:5000/services/${params.id}`)
+                // },
+                element: <ServiceDetails></ServiceDetails>
             },
             {
                 path: '/reviews',
