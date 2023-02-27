@@ -45,7 +45,7 @@ const Header = () => {
                         Home
                     </Link>
                     <Link
-                        to="/services"
+                        to="/allServices"
                         className="ml-4 px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-gray-700 focus:outline-none focus:text-white focus:bg-gray-700"
                     >
                         Services
@@ -120,7 +120,7 @@ const Header = () => {
                             Home
                         </Link>
                         <Link
-                            to="/services"
+                            to="/allServices"
                             className="block px-10 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-700 focus:outline-none focus:text-white focus:bg-gray-700"
                             onClick={() => setShowMenu(false)}
                         >
