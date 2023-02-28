@@ -28,7 +28,7 @@ const AllServices = () => {
                                 <h2 className="text-xl mb-3 font-bold">{service.name}</h2>
                                 <p className="mb-2 font-bold">${service.price}</p>
                                 <p>{service.description}</p>
-                                <Link to={`/serviceDetails/${service._id}`} className="mt-4 inline-block">
+                                <Link to={`/services/${service._id}`} className="mt-4 inline-block">
                                     <button className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-opacity-50">
                                         View Details
                                     </button>
