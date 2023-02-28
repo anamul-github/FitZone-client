@@ -1,14 +1,23 @@
 import React, { useEffect, useState } from 'react';
 import { PhotoProvider, PhotoView } from 'react-photo-view';
 import { Link } from 'react-router-dom';
+import Loader from '../Shared/Loader/Loader';
 
 const AllServices = () => {
     const [services, setServices] = useState([]);
+    const [loading, setLoading] = useState(false);
+
     useEffect(() => {
+        setLoading(true);
         fetch('http://localhost:5000/allServices')
             .then(res => res.json())
             .then(data => setServices(data));
-    }, [])
+        setLoading(false);
+    }, [setLoading]);
+
+    if (loading) {
+        return <div className='flex justify-center items-center'><Loader></Loader></div>
+    }
 
     return (
         <div className='w-full bg-[#0a192f] text-white'>
@@ -26,7 +35,7 @@ const AllServices = () => {
                             </div>
                             <div className="p-4 bg-[#0D0D0D]">
                                 <h2 className="text-xl mb-3 font-bold">{service.name}</h2>
-                                <p className="mb-2 font-bold">${service.price}</p>
+                                <p className="mb-2 font-bold">Price: ${service.price}</p>
                                 <p>{service.description}</p>
                                 <Link to={`/services/${service._id}`} className="mt-4 inline-block">
                                     <button className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-opacity-50">

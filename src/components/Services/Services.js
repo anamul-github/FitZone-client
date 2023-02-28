@@ -2,18 +2,29 @@ import React, { useEffect, useState } from 'react';
 import { PhotoProvider, PhotoView } from 'react-photo-view';
 import { Link } from 'react-router-dom';
 import 'react-photo-view/dist/react-photo-view.css';
+import Loader from '../Shared/Loader/Loader';
 
 const Services = () => {
     const [services, setServices] = useState([]);
+    const [loading, setLoading] = useState(false);
+
     useEffect(() => {
+        setLoading(true);
         fetch('http://localhost:5000/services')
             .then(res => res.json())
             .then(data => setServices(data));
-    }, [])
+        setLoading(false);
+    }, [setLoading]);
+
+    if (loading) {
+        return <div className='flex justify-center items-center'><Loader></Loader></div>
+    }
 
     return (
         <div className="w-full lg:h-screen bg-[#0a192f] text-white">
             <h2 className='text-4xl text-center font-bold py-10'>Services</h2>
+
+
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                 {
                     services.map(service => (
@@ -40,6 +51,7 @@ const Services = () => {
                 }
 
             </div>
+
             <div className='flex justify-center py-3 mt-5'>
                 <Link to='/allServices'><button className='btn-success px-5 py-2 mb-5 hover:bg-blue-600'>See All Services</button>
                 </Link>

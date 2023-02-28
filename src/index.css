@@ -11,6 +11,13 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.bg-glass-dark {
+  backdrop-filter: blur(13.7px);
+  -webkit-backdrop-filter: blur(13.7px);
+  background: rgba(26, 26, 26, .77);
+  box-shadow: 0 4px 30px rgb(0 0 0 / 10%);
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
