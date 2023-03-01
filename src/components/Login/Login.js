@@ -37,7 +37,7 @@ const Login = () => {
                 </form>
                 <p className="px-3 my-0 text-sm text-gray-400 text-center font-bold pt-2">Sign in with social accounts</p>
                 <div className="p-3 text-xl flex justify-center">
-                    <button className="w-1/2 py-3 font-medium text-white bg-gray-800 rounded-lg hover:bg-blue-600"><FaGoogle className="inline-block mr-2" /> Google</button>
+                    <button className="w-1/2 py-2 font-medium text-white bg-gray-800 rounded-lg hover:bg-blue-600"><FaGoogle className="inline-block mr-2" /> Google</button>
                 </div>
                 <p className="text-center text-gray-400 text-sm font-bold">
                     New member?{' '}
