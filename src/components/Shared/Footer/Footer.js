@@ -3,9 +3,9 @@ import { BsFacebook, BsGithub, BsLinkedin } from 'react-icons/bs';
 
 const Footer = () => {
     return (
-        <footer className="footer footer-center p-10 bg-gray-800 text-white rounded">
+        <footer className="footer footer-center p-10 bg-gray-800 text-white">
             <h2 className='text-3xl'>Let's Connect</h2>
-            <div className='flex justify-start text-3xl space-x-2 my-4'>
+            <div className='flex justify-start text-3xl space-x-2 my-3'>
                 <a href="https://github.com/anamul-github" target="_blank" rel="noreferrer"><BsGithub /></a>
                 <a href="https://www.linkedin.com/in/anamul-hasan/" target="_blank" rel="noreferrer"><BsLinkedin /></a>
                 <a href="https://www.facebook.com" target="_blank" rel="noreferrer"><BsFacebook /></a>

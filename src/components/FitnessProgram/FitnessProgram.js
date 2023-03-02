@@ -8,7 +8,7 @@ function FitnessProgram() {
         <section className="bg-[#0D0D0D] text-white py-20 lg:h-screen lg:flex lg:justify-center lg:items-center">
             <div className="container px-4 flex justify-center items-center">
                 <div>
-                    <div className="w-full lg:w-3/4 lg:pl-24 px-4 mb-8 lg:mb-0">
+                    <div className="w-full lg:w-4/5 lg:pl-28 px-4 mb-8 lg:mb-0">
                         <h2 className="text-3xl lg:text-4xl font-bold leading-tight mb-4">
                             Your Journey to a Better You Starts Here
                         </h2>
@@ -48,7 +48,7 @@ function FitnessProgram() {
                     </div>
                 </div>
             </div>
-            <div className='flex justify-center'>
+            <div className='flex justify-center lg:pr-12'>
                 <Lottie animationData={fitness} loop={true} />
             </div>
         </section>

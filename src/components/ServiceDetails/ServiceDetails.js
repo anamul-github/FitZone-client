@@ -6,7 +6,7 @@ const ServiceDetails = () => {
     const { name, img, price, description, details } = useLoaderData();
 
     return (
-        <div className='bg-[#0D0D0D] text-white pb-5'>
+        <div style={{ backgroundImage: "url('..https://i.ibb.co/8BkhyJk/32782014.jpg')" }} className="bg-[#0D0D0D] text-white pb-5">
             <h2 className='text-3xl font-bold text-center py-5'>Service Details</h2>
             <div className="max-w-6xl mx-auto px-4">
                 <div className="w-full md:w-1/2 mx-auto">
